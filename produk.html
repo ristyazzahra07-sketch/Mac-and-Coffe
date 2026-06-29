@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MAC.</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">MAC.</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="pemesanan.html">Pemesanan</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <h1>Produk</h1>
+      <input
+        type="text"
+        id="cari"
+        class="form-control"
+        placeholder="Cari produk..."
+        onkeyup="filterProduk()"
+      /><br />
+      <H2 class="text-center">MAKANAN</H2>
+      <div class="row" id="daftar">
+        <div class="col-md-4 produk">
+           <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <img src="images/makanan1.jpeg" class="img-responsive img-thumbnail">
+              <h3>Japanese Sandwich </h3>
+              <p>khas jepang dengan tekstur lembut dan isian pilihan yang memberikan perpaduan 
+                rasa gurih, lezat dan menyenangkan</p>
+                       <p>Rp36.000</p>
+               <a href="pemesanan.html" class="btn btn-info"> Pesan </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 produk">
+          <div class="panel panel-default">
+            <div class="panel-body text-center">
+                <img src="images/makanan2.jpeg" class="img-responsive img-thumbnail">
+              <h3>Sate Taichan</h3>
+              <p>sate ayam bakar dengan bumbu sederhana yang di sajikan bersama
+                        sambal pedas dan jeruk nipis, memberikan cita rasa gurih, pedas dan nikmat </p>
+              <p>Rp.27.000</p>
+               <a href="pemesanan.html" class="btn btn-info"> Pesan </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 produk">
+          <div class="panel panel-default">
+             <div class="panel-body text-center">
+                <img src="images/makanan3.jpeg" class="img-responsive img-thumbnail">
+              <h3>Nasi Bakar </h3>
+              <p>nasi yang di bungkus daun pisang dan di bakar hingga
+                       harum, di sajika dengan isian pilihan yang gurih dan lezat  .
+                    </p>Rp.30.000</p>
+               <a href="pemesanan.html" class="btn btn-info"> Pesan </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <H2 class="text-center">MINUMAN</H2>
+      <div class="col-md-4 produk">
+          <div class="panel panel-default">
+             <div class="panel-body text-center">
+                <img src="images/minuman1.jpeg" class="img-responsive img-thumbnail">
+              <h3>Caramel macchiato</h3>
+              <p>perpaduan kopi premium,susu segar, dan sirup caramel yang menghaslkan 
+                        cita rasa manis serta aroma kopi yang khas. Cocok dinikmati kapan saja untuk menemani aktivitas anda</p>
+              <p>Rp35.000</p>
+               <a href="pemesanan.html" class="btn btn-info"> Pesan </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 produk">
+          <div class="panel panel-default">
+             <div class="panel-body text-center">
+                <img src="images/minuman2.jpeg" class="img-responsive img-thumbnail">
+              <h3>Strawberry Latte</h3>
+              <p>minuman segar yang memadukan susu segar dengan pure strawberry pilihan. Dilengkapi whipped cream lembutdi atasnya, 
+                      memberikan rasa manis dan cream yang menyegarkan.</p>
+              <p>Rp30.000</p>
+               <a href="pemesanan.html" class="btn btn-info"> Pesan </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 produk">
+          <div class="panel panel-default">
+             <div class="panel-body text-center">
+                <img src="images/minuman3.jpeg" class="img-responsive img-thumbnail">
+              <h3>Kopi Susu</h3>
+              <p>kombinasi kopi pilihan, gula aren, creamer, dan susu segar yang menghasilkan rasa kopi yang lembut,
+                         manis, dan nikmat di setiap tegukan  </p>
+              <p>Rp10.000</p>
+               <a href="pemesanan.html" class="btn btn-info"> Pesan </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+      function filterProduk() {
+        let input = document.getElementById("cari").value.toLowerCase();
+        document.querySelectorAll(".produk").forEach(function (p) {
+          p.style.display = p.innerText.toLowerCase().includes(input)
+            ? ""
+            : "none";
+        });
+      }
+    </script>
+    <footer class="footer text-center">
+        <p>@2026 MAC coffe</p>
+    </footer>
+  </body>
+</html>
